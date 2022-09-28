@@ -19,4 +19,11 @@ public class BookController {
     @Value("${enterprise.subject[0]}")
     private String subject_00;
 
+    @GetMapping("/{id}")
+    public String getById(@PathVariable Integer id) {
+        System.out.println(lesson);
+        System.out.println(port);
+        System.out.println(subject_00);
+        return "hello , spring boot!";
+    }
 }
